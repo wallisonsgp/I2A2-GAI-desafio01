@@ -40,3 +40,7 @@ Os prompts foram criados com base na metodologia de Chain Of Thought (CoT).
 - Photo Realistic cover of the book,  Professional draw for the book The Lord of the Rings
 - Photo Realistic cover of the book,  Professional draw for the book Jane Eyre
 - Photo Realistic cover of the book,  Professional draw for the book Harry Potter and the Sorcerer's Stone
+
+# Entrega
+Wallison Willian Guimarães
+wallisonsg@gmail.com
