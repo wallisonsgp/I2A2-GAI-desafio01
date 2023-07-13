@@ -27,7 +27,7 @@ Os prompts foram criados com base na metodologia de Chain Of Thought (CoT).
 
 ## Para geração da imagem da logo foi utilizado o DALL-e com o prompt
 
-- a lettermark of Bookstore, logo, serif font, vector, simple 
+- Photo Realistic logo of the store,  Professional brand for the bookstore
 
 ## Para geração das imagens do livros
 - create a cover of the book "The Great Gatsby"
