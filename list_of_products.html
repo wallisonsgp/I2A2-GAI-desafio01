@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .product-image {
+      max-width: 200px;
+      max-height: 200px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">Product List</h1>
+    <div class="row">
+      <!-- Generate product cards dynamically using JavaScript -->
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // JSON data for books
+      var books = [
+        {
+          "id": 1,
+          "product_name": "The Great Gatsby",
+          "unit_price": 19.99,
+          "product_image": "great_gatsby.jpg"
+        },
+        {
+          "id": 2,
+          "product_name": "To Kill a Mockingbird",
+          "unit_price": 14.99,
+          "product_image": "to_kill_a_mockingbird.jpg"
+        },
+        {
+          "id": 3,
+          "product_name": "1984",
+          "unit_price": 16.99,
+          "product_image": "1984.jpg"
+        },
+        {
+          "id": 4,
+          "product_name": "Pride and Prejudice",
+          "unit_price": 12.99,
+          "product_image": "pride_and_prejudice.jpg"
+        },
+        {
+          "id": 5,
+          "product_name": "The Catcher in the Rye",
+          "unit_price": 15.99,
+          "product_image": "catcher_in_the_rye.jpg"
+        },
+        {
+          "id": 6,
+          "product_name": "To the Lighthouse",
+          "unit_price": 13.99,
+          "product_image": "to_the_lighthouse.jpg"
+        },
+        {
+          "id": 7,
+          "product_name": "Moby-Dick",
+          "unit_price": 18.99,
+          "product_image": "moby_dick.jpg"
+        },
+        {
+          "id": 8,
+          "product_name": "The Lord of the Rings",
+          "unit_price": 24.99,
+          "product_image": "lord_of_the_rings.jpg"
+        },
+        {
+          "id": 9,
+          "product_name": "Jane Eyre",
+          "unit_price": 11.99,
+          "product_image": "jane_eyre.jpg"
+        },
+        {
+          "id": 10,
+          "product_name": "Harry Potter and the Sorcerer's Stone",
+          "unit_price": 17.99,
+          "product_image": "harry_potter.jpg"
+        }
+      ];
+
+      // Generate product cards dynamically
+      var productContainer = $(".row");
+      $.each(books, function(index, book) {
+        var productCard = $("<div>", { class: "col-lg-4 col-md-6 col-sm-12" });
+        var cardContent = $("<div>", { class: "product-card" });
+        var productImage = $("<img>", {
+          src: "path/to/images/" + book.product_image,
+          alt: book.product_name,
+          class: "product-image"
+        });
+        var productName = $("<h3>", { text: book.product_name });
+        var unitPrice = $("<p>", { text: "Unit Price: $" + book.unit_price });
+        var productId = $("<p>", { text: "Product ID: " + book.id });
+
+        cardContent.append(productImage);
+        cardContent.append(productName);
+        cardContent.append(unitPrice);
+        cardContent.append(productId);
+        productCard.append(cardContent);
+        productContainer.append(productCard);
+      });
+    });
+  </script>
+</body>
+
+</html>
